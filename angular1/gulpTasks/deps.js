@@ -1,5 +1,3 @@
-//dependências
-
 const gulp = require('gulp')
 const uglify = require('gulp-uglify')
 const uglifycss = require('gulp-uglifycss')
@@ -18,7 +16,6 @@ gulp.task('deps.js', () => {
     'node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js',
     'node_modules/admin-lte/dist/js/app.min.js',
   ])
-  .pipe(uglify())
   .pipe(concat('deps.min.js'))
   .pipe(gulp.dest('public/assets/js'))
 })
@@ -31,9 +28,10 @@ gulp.task('deps.css', () => {
     'node_modules/admin-lte/dist/css/AdminLTE.min.css',
     'node_modules/admin-lte/dist/css/skins/_all-skins.min.css',
   ])
-  .pipe(uglifycss({"uglyComments": true}))
+  .pipe(uglifycss({ "uglyComments": true }))
   .pipe(concat('deps.min.css'))
   .pipe(gulp.dest('public/assets/css'))
+
 })
 
 gulp.task('deps.fonts', () => {
