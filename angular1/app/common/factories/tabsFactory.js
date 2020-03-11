@@ -1,5 +1,5 @@
 (function(){
-  andular.modular('primeiraApp').factory('tabs', [ TabsFactory ])
+  angular.modular('primeiraApp').factory('tabs', [ TabsFactory ])
 
   function TabsFactory(){
 
@@ -15,6 +15,6 @@
       owner.tabDelete = tabDelete
     }
 
-    return { show }    
+    return { show }
   }
 })()
