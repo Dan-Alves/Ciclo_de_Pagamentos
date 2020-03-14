@@ -1,5 +1,5 @@
 (function(){
-  angular.modular('primeiraApp').factory('tabs', [ TabsFactory ])
+  angular.module('primeiraApp').factory('tabs', [ TabsFactory ])
 
   function TabsFactory(){
 
